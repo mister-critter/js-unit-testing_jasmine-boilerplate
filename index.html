@@ -13,6 +13,14 @@
             return !bool;
         }
 
+        function add(x, y) {
+            return x + y;
+        }
+
+        function subtract(x, y) {
+            return x - y;
+        }
+
         describe('Write Your Test Group Descriptions Here', () => {
             it('Write Your Test Expectation Here', () => {
                 // arrange
@@ -23,6 +31,34 @@
 
                 // assert
                 expect(result).toBe(true);
+            })
+        });
+
+        describe('Addition math function', () => {
+            it('Gets the sum of two numbers', () => {
+                // arrange
+                const num1 = 2;
+                const num2 = 3;
+
+                // act
+                const result = add(num1, num2);
+
+                // assert
+                expect(result).toBe(5);
+            })
+        });
+
+        describe('Subtraction math function', () => {
+            it('Gets the difference between two numbers', () => {
+                // arrange
+                const num1 = 2;
+                const num2 = 3;
+
+                // act
+                const result = subtract(num1, num2);
+
+                // assert
+                expect(result).toBe(-1);
             })
         });
     </script>
