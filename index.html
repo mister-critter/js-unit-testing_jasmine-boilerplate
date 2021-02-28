@@ -34,8 +34,8 @@
             })
         });
 
-        describe('Addition math function', () => {
-            it('Gets the sum of two numbers', () => {
+        describe('Math functions', () => {
+            it('Test addition function', () => {
                 // arrange
                 const num1 = 2;
                 const num2 = 3;
@@ -45,11 +45,9 @@
 
                 // assert
                 expect(result).toBe(5);
-            })
-        });
+            });
 
-        describe('Subtraction math function', () => {
-            it('Gets the difference between two numbers', () => {
+            it('Test subtraction function', () => {
                 // arrange
                 const num1 = 2;
                 const num2 = 3;
@@ -59,7 +57,21 @@
 
                 // assert
                 expect(result).toBe(-1);
-            })
+            });
+
+            it('Test that sum is greater than 5', () => {
+                // arrange
+                const num1 = 2;
+                /* const num2 = 2; // fail */
+                const num2 = 4; // pass
+
+                // act
+                const result = add(num1, num2);
+
+                // assert
+                expect(result).toBeGreaterThan(5);
+            });
+
         });
     </script>
 </head>
