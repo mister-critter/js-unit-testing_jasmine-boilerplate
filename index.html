@@ -35,6 +35,20 @@
         });
 
         describe('Math functions', () => {
+
+            /* 
+            // You can use the below variable definitions and beforeEach() function to pass 
+            // the same variables (or run some relevant function) before each 'it()' test
+
+            let num1;
+            let num2;
+
+            beforeEach(() => {
+                num1 = 2;
+                num2 = 3;
+            }); 
+            */
+
             it('Test addition function', () => {
                 // arrange
                 const num1 = 2;
@@ -47,7 +61,8 @@
                 expect(result).toBe(5);
             });
 
-            it('Test subtraction function', () => {
+            // 'fit()' puts the focus on this test and doesn't run the others
+            fit('Test subtraction function', () => {
                 // arrange
                 const num1 = 2;
                 const num2 = 3;
@@ -59,16 +74,17 @@
                 expect(result).toBe(-1);
             });
 
-            it('Test that sum is greater than 5', () => {
+            // 'xit()' ignores this test
+            xit('Test that sum is greater than 5', () => {
                 // arrange
                 const num1 = 2;
-                /* const num2 = 2; // fail */
-                const num2 = 4; // pass
+                const num2 = 2;
 
                 // act
                 const result = add(num1, num2);
 
                 // assert
+                // this fails because the sum is 4, and therefore not greater than 5
                 expect(result).toBeGreaterThan(5);
             });
 
